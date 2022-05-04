@@ -1,0 +1,23 @@
+{
+    "presets": [
+      ["next/babel", {
+        "preset-env": {
+          "useBuiltIns": "entry",
+          "corejs": "3.9.1"
+        }
+      }]
+    ],
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true,
+          /* displayName should be toggle 'true' if you want to debug css, else,
+          it'll be throwing errors on console says: 'prop className did not match the server' */
+          "displayName": false,
+          "preprocess": false
+        }
+      ],
+      "@babel/plugin-proposal-optional-chaining"
+    ]
+  }
